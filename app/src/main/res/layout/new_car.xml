@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/extra_linear"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/car_name"
+                android:hint="Car Name"
+
+                android:inputType="textPersonName"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Car type"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/car_type_economy"
+                android:text="Economy"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/car_type_premium"
+                android:text="Premium"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            >
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/car_number"
+                android:hint="Car number"
+                android:inputType="textPersonName"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Driver image (*)"
+            android:textColor="#000"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:layout_width="80dp"
+            android:tint="@color/io_grays2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/trip"
+            android:id="@+id/car_image"
+            android:layout_gravity="center"
+            android:layout_height="80dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_height="match_parent"
+    tools:context=".NewDriverActivity">
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="7dp"
+    android:layout_height="wrap_content">
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/driver_name"
+        android:hint="Driver Name (*)"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content" />
+</android.support.design.widget.TextInputLayout>
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="7dp"
+    android:layout_height="wrap_content">
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/driver_dob"
+        android:hint="Driver DOB (*) dd/mm/yyyy"
+        android:inputType="date"
+
+        android:layout_height="wrap_content" />
+
+</android.support.design.widget.TextInputLayout>
+
+<RadioGroup
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="7dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Gender (*)"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:id="@+id/gender_male"
+        android:text="Male"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:id="@+id/gender_female"
+        android:text="Female"
+        android:layout_height="wrap_content" />
+</RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Driver image (*)"
+        android:layout_marginTop="7dp"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+<ImageButton
+    android:layout_width="80dp"
+    android:tint="@color/io_grays2"
+    android:scaleType="fitCenter"
+    android:src="@drawable/new_driver"
+    android:id="@+id/driver_image"
+    android:layout_gravity="center"
+    android:layout_height="80dp" />
+    <TextView
+        android:layout_width="180dp"
+        android:text="Car details (Optional)"
+        android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:layout_marginTop="7dp"
+        android:onClick="carDetailsOnClicked"
+         android:layout_height="wrap_content" />
+    <include layout="@layout/new_car"
+        android:id="@+id/new_car"
+        android:visibility="gone"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:text="add new Driver"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:id="@+id/action_button"
+        android:onClick="addDriverOnClicked"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+</LinearLayout>
